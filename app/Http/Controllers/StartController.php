@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class StartController extends Controller
 {
     public function index(){
-        $users = User::first(); //get получить все записи!
-        dd($users->name);
+        $users = User::get(); //get - получить все записи! first - получает пурвую запись
+        return view('index', ['users'=>$users]);
     }
 }
