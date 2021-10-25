@@ -1,0 +1,21 @@
+Полезная ссылка: https://laravel.ru/docs/v5/migrations
+
+php artisan migrate
+!!!!если ошибка в файле config/database.php
+!!!!'charset' => 'utf8mb4',
+!!!!'collation' => 'utf8mb4_unicode_ci',
+!!!!заменить на
+!!!!'charset' => 'utf8',
+!!!!'collation' => 'utf8_unicode_ci',
+
+Добавление юзера
+    DB::table('users')->insert(
+        [
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('secret'),
+        ]
+    );
+
+admin@gmail.com
+secret
