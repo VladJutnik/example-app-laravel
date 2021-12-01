@@ -10,6 +10,9 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    public function books(){
+        return $this->hasMany(Book::class, 'user_id', 'id');
+    }
     /**
      * The attributes that are mass assignable.
      *

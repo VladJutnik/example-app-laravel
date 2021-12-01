@@ -1,5 +1,4 @@
-
-    <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +11,10 @@
 <h1>Авторы: wdwdwdwdwdwdwdwd wdwdw </h1>
 <a href="/admin/login">Твой вход</a>
 @foreach($users as $key => $user)
-    <ul><b> <a href="autor.php?id={{$user->id}}">{{$user->name}}</a></b> </ul>
+    <ul><b> <a href="autor.php?id={{$user->id}}">{{$user->name}}</a></b></ul>
+    @foreach($user->books as $book)
+        <li>{{$book->name}}</li>
+    @endforeach
 @endforeach
 <?/*
 foreach ($users as $key => $user):

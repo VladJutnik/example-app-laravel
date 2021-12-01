@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'StartController@index');
+Route::get('books', 'StartController@books');
