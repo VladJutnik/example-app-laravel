@@ -15,7 +15,7 @@ class CategoryBooks extends Migration
     {
         Schema::create('category_books', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('category_id');
             $table->foreignId('book_id');
             $table->timestamps();
         });
