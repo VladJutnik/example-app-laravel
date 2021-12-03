@@ -17,6 +17,7 @@ Route::get('/', 'StartController@index');
 Route::get('books', 'StartController@books');
 Route::get('booksw', 'StartController@booksw');
 Route::get('categories', 'StartController@categories');
+Route::get('categories', 'StartController@categories');
 
 Auth::routes();
 
