@@ -17,7 +17,10 @@ Route::get('/', 'StartController@index');
 Route::get('books', 'StartController@books');
 Route::get('booksw', 'StartController@booksw');
 Route::get('categories', 'StartController@categories');
-Route::get('categories', 'StartController@categories');
+//middleware прослойкак между запрос другими словами межзапросом, функция проверки между запросом
+Route::get('/admin', 'AdminController@index')->middleware('auth');
+
+
 
 Auth::routes();
 

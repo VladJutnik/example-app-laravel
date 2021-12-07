@@ -10,6 +10,7 @@
 <body>
 <h1>Авторы: wdwdwdwdwdwdwdwd wdwdw </h1>
 <a href="/login">Твой вход</a>
+<a href="/register">Регистрация</a>
 @foreach($users as $key => $user)
     <ul><b> <a href="autor.php?id={{$user->id}}">{{$user->name}}</a></b></ul>
     @foreach($user->books as $book)
